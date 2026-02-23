@@ -14,7 +14,6 @@
 
 body {
     margin: 0;
-    padding: 15px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     justify-content: center;
@@ -23,273 +22,131 @@ body {
     font-family: 'Noto Serif Devanagari', serif;
 }
 
-/* ===== OUTER CARD ===== */
+/* ===== WHATSAPP STATUS CARD ===== */
 .card {
-    width: 100%;
-    max-width: 500px;
+    width: 92vw;
+    max-width: 420px;
+    aspect-ratio: 9 / 16;
     background: linear-gradient(to bottom, #fff9e6 0%, #fffef5 100%);
-    border: 12px solid #f093fb;
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(245, 87, 108, 0.2);
+    border: 10px solid #f093fb;
+    border-radius: 26px;
+    padding: 14px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+/* ===== INNER CARD ===== */
+.card-inner {
+    height: 100%;
+    border: 3px double #8b0000;
+    border-radius: 20px;
+    padding: 16px 14px;
+    text-align: center;
+    background: rgba(255,255,255,0.6);
     position: relative;
 }
 
-/* ===== INNER BORDER ===== */
-.card-inner {
-    border: 4px double #8b0000;
-    border-radius: 20px;
-    padding: 25px 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.5);
-    position: relative;
+/* ===== DECOR ===== */
+.flower-decoration {
+    position: absolute;
+    font-size: 22px;
+    opacity: 0.6;
 }
+.flower-top-left { top: 40px; left: 10px; }
+.flower-top-right { top: 40px; right: 10px; }
+.flower-bottom-left { bottom: 12px; left: 10px; }
+.flower-bottom-right { bottom: 12px; right: 10px; }
 
 /* ===== HEADER ===== */
 .top-text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #8b0000;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    margin-bottom: 6px;
 }
 
 /* ===== TITLE ===== */
 .main-title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #1b5e20;
-    margin: 10px 0 15px;
-    letter-spacing: 1px;
+    margin: 6px 0 10px;
 }
 
 /* ===== QUOTE ===== */
 .quote {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.45;
     color: #4a3728;
-    margin-bottom: 15px;
-    padding: 12px 15px;
-    background: rgba(255, 248, 220, 0.6);
-    border-left: 4px solid #d4af37;
-    border-right: 4px solid #d4af37;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255,248,220,0.7);
+    border-left: 3px solid #d4af37;
+    border-right: 3px solid #d4af37;
     border-radius: 10px;
     font-style: italic;
 }
 
 /* ===== PHOTO ===== */
 .photo-frame {
-    width: 150px;
-    height: 150px;
-    margin: 15px auto;
-    border: 5px solid #8b0000;
-    padding: 5px;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+    border: 4px solid #8b0000;
+    padding: 4px;
     background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    position: relative;
 }
-
-.photo-frame::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(212, 175, 55, 0.1));
-    border-radius: 50%;
-    z-index: -1;
-}
-
 .photo-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 /* ===== NAME ===== */
 .name {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     color: #8b0000;
-    margin: 12px 0 8px;
-    text-shadow: 1px 1px 2px rgba(139, 0, 0, 0.2);
-    letter-spacing: 1px;
+    margin: 8px 0 6px;
 }
 
-/* ===== BODY TEXT ===== */
+/* ===== TEXT ===== */
 .details {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.45;
     color: #3d2817;
-    margin: 8px 0;
-    font-weight: 500;
+    margin: 6px 0;
 }
 
-/* ===== SECTION TITLES ===== */
+/* ===== SECTION ===== */
 .section-title {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     color: #8b0000;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    margin: 10px 0 6px;
 }
 
 /* ===== DIVIDER ===== */
 hr {
     border: none;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(to right, transparent, #8b0000, transparent);
     width: 70%;
-    margin: 15px auto;
-    border-radius: 2px;
+    margin: 10px auto;
 }
 
 /* ===== FOOTER ===== */
 .footer {
     display: inline-block;
-    background: linear-gradient(135deg, #8b0000 0%, #c62828 100%);
+    background: linear-gradient(135deg, #8b0000, #c62828);
     color: #fff;
-    padding: 8px 25px;
-    border-radius: 30px;
-    margin: 15px 0;
-    font-size: 18px;
+    padding: 6px 22px;
+    border-radius: 25px;
+    margin: 10px 0;
+    font-size: 16px;
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
-    letter-spacing: 2px;
-}
-
-/* ===== DECORATIVE CORNERS ===== */
-.card-inner::before,
-.card-inner::after {
-    content: 'ॐ';
-    position: absolute;
-    font-size: 28px;
-    color: #ff6b35;
-    opacity: 0.7;
-}
-
-.card-inner::before {
-    top: 10px;
-    left: 10px;
-}
-
-.card-inner::after {
-    top: 10px;
-    right: 10px;
-}
-
-/* ===== DECORATIVE FLOWERS ===== */
-.flower-decoration {
-    position: absolute;
-    font-size: 24px;
-    opacity: 0.6;
-}
-
-.flower-top-left {
-    top: 45px;
-    left: 12px;
-    color: #ff69b4;
-}
-
-.flower-top-right {
-    top: 45px;
-    right: 12px;
-    color: #ff69b4;
-}
-
-.flower-bottom-left {
-    bottom: 12px;
-    left: 12px;
-    color: #ffa500;
-}
-
-.flower-bottom-right {
-    bottom: 12px;
-    right: 12px;
-    color: #ffa500;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (min-width: 600px) {
-    .card {
-        max-width: 600px;
-        padding: 25px;
-    }
-    .card-inner {
-        padding: 30px 25px;
-    }
-    .top-text {
-        font-size: 22px;
-    }
-    .main-title {
-        font-size: 32px;
-    }
-    .quote {
-        font-size: 16px;
-    }
-    .photo-frame {
-        width: 180px;
-        height: 180px;
-    }
-    .name {
-        font-size: 30px;
-    }
-    .details {
-        font-size: 17px;
-    }
-    .section-title {
-        font-size: 24px;
-    }
-    .footer {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 900px) {
-    .card {
-        max-width: 700px;
-        border-width: 15px;
-        padding: 30px;
-    }
-    .card-inner {
-        padding: 35px 30px;
-    }
-    .top-text {
-        font-size: 24px;
-    }
-    .main-title {
-        font-size: 36px;
-    }
-    .quote {
-        font-size: 18px;
-    }
-    .photo-frame {
-        width: 200px;
-        height: 200px;
-    }
-    .name {
-        font-size: 34px;
-    }
-    .details {
-        font-size: 18px;
-    }
-    .section-title {
-        font-size: 26px;
-    }
-}
-
-@media print {
-    body {
-        background: white;
-        padding: 0;
-    }
-    .card {
-        box-shadow: none;
-    }
 }
 </style>
 </head>
@@ -328,17 +185,17 @@ hr {
 
 <div class="details">
 ਆਪਣੀ ਸੰਸਾਰਕ ਯਾਤਰਾ ਪੂਰੀ ਕਰਦੇ ਹੋਏ<br>
-ਮਿਤੀ 13/02/2026 ਨੂੰ ਅਚਾਨਕ ਸਦੀਵੀ ਵਿਛੋੜਾ ਦੇ ਕੇ<br>
-ਪ੍ਰਭੂ ਚਰਨਾਂ ਵਿੱਚ ਜਾ ਬਿਰਾਜੇ ਹਨ।
+ਮਿਤੀ 13/02/2026 ਨੂੰ ਸਦੀਵੀ ਵਿਛੋੜਾ ਦੇ ਕੇ<br>
+ਪ੍ਰਭੂ ਚਰਨਾਂ ਵਿੱਚ ਲੀਨ ਹੋ ਗਏ ਹਨ।
 </div>
 
 <hr>
 
 <div class="section-title">ਅੰਤਿਮ ਅਰਦਾਸ ਅਤੇ ਸੋਕ ਕੀਰਤਨ</div>
-<div class="details">(ਦਿਵਿਆ ਜਯੋਤੀ ਜਾਗ੍ਰਿਤੀ ਸੰਸਥਾਨ ਦੀਆਂ ਭੈਣਾਂ ਦੁਆਰਾ)</div>
+<div class="details">(ਦਿਵਿਆ ਜਯੋਤੀ ਜਾਗ੍ਰਿਤੀ ਸੰਸਥਾਨ)</div>
 
 <div class="details">
-ਮਿਤੀ: 25/02/2026 (ਦਿਨ ਬੁੱਧਵਾਰ)<br>
+ਮਿਤੀ: 25/02/2026 (ਬੁੱਧਵਾਰ)<br>
 ਸਮਾਂ: 11:00 ਤੋਂ 12:30 ਵਜੇ ਤੱਕ
 </div>
 
@@ -351,11 +208,11 @@ hr {
 
 <div class="section-title">ਸਥਾਨ</div>
 <div class="details">
-ਪੰਚਾਇਤੀ ਧਰਮਸ਼ਾਲਾ (ਪਟਿਆਲਾ ਮੰਡੀ) , ਰਾਮਪੁਰਾ ਫੂਲ
+ਪੰਚਾਇਤੀ ਧਰਮਸ਼ਾਲਾ (ਪਟਿਆਲਾ ਮੰਡੀ), ਰਾਮਪੁਰਾ ਫੂਲ
 </div>
 
 <div class="details">
-ਸੋ ਆਪ ਜੀ ਸਮੇਂ ਸਿਰ ਪਹੁੰਚਣ ਦੀ ਕ੍ਰਿਪਾਲਤਾ ਕਰਨਾ ਜੀ।
+ਸਮੇਂ ਸਿਰ ਪਹੁੰਚਣ ਦੀ ਕ੍ਰਿਪਾਲਤਾ ਕਰਨਾ ਜੀ।
 </div>
 
 <div class="footer">✽ ਦੁਖੀ ਹਿਰਦੇ ✽</div>
